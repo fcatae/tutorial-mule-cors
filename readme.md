@@ -41,7 +41,7 @@ It will declare the following items:
 
 # Examples
 
-### No CORS (default Server implementation)
+## No CORS (default Server implementation)
 ```
 curl -i https://anypoint.mulesoft.com/mocking/api/v1/links/0ff5ac86-bcc8-466b-b18d-31aef2b6fd56/data/nocors
 ```
@@ -52,6 +52,22 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 49
 ```
+
+## Allow simple GET/HEAD calls without additional headers
+
+```
+curl -i https://anypoint.mulesoft.com/mocking/api/v1/links/0ff5ac86-bcc8-466b-b18d-31aef2b6fd56/data/get-cors
+```
+
+Response:
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 49
+Access-Control-Allow-Origin: *
+```
+
+
 
 # References
 
