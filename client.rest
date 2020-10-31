@@ -11,12 +11,12 @@ Accept: application/json
 Origin: http://localhost
 ###
 
-### Accept GET from a different Origin
+### Accept POST from a different Origin
 POST https://{{host}}/data/all-cors
 Accept: application/json
 Origin: http://localhost
 
-### Accept GET from a different Origin
+### Accept POST from a different Origin
 OPTIONS https://{{host}}/data/all-cors
 Origin: http://localhost
 Accept: application/json
