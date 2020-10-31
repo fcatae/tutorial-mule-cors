@@ -38,3 +38,21 @@ It will declare the following items:
 * Origin
 * Headers
 * Methods
+
+# References
+
+https://fetch.spec.whatwg.org/#http-access-control-allow-credentials
+
+# Example
+
+```javascript
+fetch("https://victim.example/naïve-endpoint", {
+  method: "POST",
+  headers: [
+    ["Content-Type", "application/json"],
+    ["Content-Type", "text/plain"]
+  ],
+  credentials: "include",
+  body: JSON.stringify(exerciseForTheReader)
+});
+```
