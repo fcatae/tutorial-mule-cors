@@ -39,6 +39,20 @@ It will declare the following items:
 * Headers
 * Methods
 
+# Examples
+
+### No CORS (default Server implementation)
+```
+curl -i https://anypoint.mulesoft.com/mocking/api/v1/links/0ff5ac86-bcc8-466b-b18d-31aef2b6fd56/data/nocors
+```
+
+Response:
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 49
+```
+
 # References
 
 https://fetch.spec.whatwg.org/#http-access-control-allow-credentials

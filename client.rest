@@ -1,0 +1,11 @@
+@host=anypoint.mulesoft.com/mocking/api/v1/links/0ff5ac86-bcc8-466b-b18d-31aef2b6fd56
+
+### Accept GET from a different Origin
+GET https://{{host}}/data/nocors
+Accept: application/json
+Origin: localhost
+
+### Accept GET from a different Origin
+GET https://{{host}}/data/get-cors
+Accept: application/json
+Origin: localhost
