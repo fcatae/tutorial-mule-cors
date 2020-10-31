@@ -5,11 +5,15 @@
     <title>Test your API</title>
 </head>
 <body>
-    Call remote endpoint
-    <p>
-        <input id="uriEndpoint" value="data.json">
-        <button onclick="updateResponse(uriEndpoint.value, textResponse)">Update</button></p>
-    <p id="textResponse">--TEXT--</p>
+    <div>
+        Call remote endpoint
+        <p>
+            <input id="uriEndpoint" value="data.json">
+            <button onclick="updateResponse(uriEndpoint.value, getRemoteData, textResponse)">GET</button></p>
+            <button onclick="updateResponse(uriEndpoint.value, getRemoteDataWithHeaders, textResponse)">GET with Headers</button></p>
+        <p id="textResponse">--TEXT--</p>            
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
