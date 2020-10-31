@@ -1,12 +1,14 @@
-function updateResponse(textResponse) {
-    textResponse.innerText = 1;
+function updateResponse(uri, textResponse) {
+    textResponse.innerText = "(calling the function)";
 
-    getRemoteData('data.json')
+    getRemoteData(uri)
     .then( res => {
         var title = res.glossary?.title;
         textResponse.innerText = title
     })
-    .catch( err => { alert('ERROR: ' + err); });
+    .catch( err => { 
+        textResponse.innerText = ('ERROR: ' + err); 
+    });
 }
 
 async function getRemoteData(url) {

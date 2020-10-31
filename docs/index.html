@@ -6,7 +6,9 @@
 </head>
 <body>
     Hello world
-    <p><button onclick="updateResponse(textResponse)">Update</button></p>
+    <p>
+        <input id="uriEndpoint" value="/data.json">
+        <button onclick="updateResponse(uriEndpoint.value, textResponse)">Update</button></p>
     <p id="textResponse">--TEXT--</p>
     <script src="index.js"></script>
 </body>
