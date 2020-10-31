@@ -4,7 +4,7 @@ function updateResponse(uri, textResponse) {
     getRemoteData(uri)
     .then( res => {
         var title = res.glossary?.title;
-        textResponse.innerText = title
+        textResponse.innerText = JSON.stringify(res);
     })
     .catch( err => { 
         textResponse.innerText = ('ERROR: ' + err); 
