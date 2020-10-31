@@ -8,4 +8,15 @@ Origin: localhost
 ### Accept GET from a different Origin
 GET https://{{host}}/data/get-cors
 Accept: application/json
-Origin: localhost
+Origin: http://localhost
+###
+
+### Accept GET from a different Origin
+POST https://{{host}}/data/all-cors
+Accept: application/json
+Origin: http://localhost
+
+### Accept GET from a different Origin
+OPTIONS https://{{host}}/data/all-cors
+Origin: http://localhost
+Accept: application/json

@@ -43,7 +43,7 @@ It will declare the following items:
 
 ## No CORS (default Server implementation)
 ```
-curl -i https://anypoint.mulesoft.com/mocking/api/v1/links/0ff5ac86-bcc8-466b-b18d-31aef2b6fd56/data/nocors
+curl -i -X GET https://anypoint.mulesoft.com/mocking/api/v1/links/0ff5ac86-bcc8-466b-b18d-31aef2b6fd56/data/nocors
 ```
 
 Response:
@@ -56,7 +56,7 @@ Content-Length: 49
 ## Allow simple GET/HEAD calls without additional headers
 
 ```
-curl -i https://anypoint.mulesoft.com/mocking/api/v1/links/0ff5ac86-bcc8-466b-b18d-31aef2b6fd56/data/get-cors
+curl -i -X GET https://anypoint.mulesoft.com/mocking/api/v1/links/0ff5ac86-bcc8-466b-b18d-31aef2b6fd56/data/get-cors
 ```
 
 Response:
@@ -67,6 +67,24 @@ Content-Length: 49
 Access-Control-Allow-Origin: *
 ```
 
+
+## Preflight calls for ALL methods and headers
+
+```
+curl -i -H "Authorization: Bearer ABC" -X OPTIONS https://anypoint.mulesoft.com/mocking/api/v1/links/0ff5ac86-bcc8-466b-b18d-31aef2b6fd56/data/all-cors
+```
+
+```
+curl -i --data "{}" -H "Authorization: Bearer ABC" -X POST https://anypoint.mulesoft.com/mocking/api/v1/links/0ff5ac86-bcc8-466b-b18d-31aef2b6fd56/data/all-cors
+```
+
+Response:
+```
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 49
+Access-Control-Allow-Origin: *
+```
 
 
 # References

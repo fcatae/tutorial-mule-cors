@@ -30,3 +30,26 @@ async function getRemoteDataWithHeaders(url) {
 
     return await response.json();
 }
+
+async function postRemoteData(url) {
+    var response = await fetch(url, {
+            method: 'POST'
+        });
+
+    if( response.status != 200 )
+        throw "HTTP status code != 200"
+
+    return await response.json();
+}
+
+async function postRemoteDataWithHeaders(url) {
+    var response = await fetch(url, {
+            method: 'POST',
+            headers: [ ['Authorization', 'Bearer ABC'] ]
+        });
+
+    if( response.status != 200 )
+        throw "HTTP status code != 200"
+
+    return await response.json();
+}

@@ -11,7 +11,9 @@
             <input id="uriEndpoint" value="data.json">
             <button onclick="updateResponse(uriEndpoint.value, getRemoteData, textResponse)">GET</button></p>
             <button onclick="updateResponse(uriEndpoint.value, getRemoteDataWithHeaders, textResponse)">GET with Headers</button></p>
-        <p id="textResponse">--TEXT--</p>            
+            <button onclick="updateResponse(uriEndpoint.value, postRemoteData, textResponse)">POST</button></p>
+            <button onclick="updateResponse(uriEndpoint.value, postRemoteDataWithHeaders, textResponse)">POST with Headers</button></p>
+            <p id="textResponse">--TEXT--</p>            
     </div>
 
     <script src="index.js"></script>
