@@ -89,7 +89,17 @@ Access-Control-Allow-Origin: *
 
 # References
 
+RFC: Fetch
 https://fetch.spec.whatwg.org/#http-access-control-allow-credentials
+
+Wikipedia
+https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+
+Mozilla
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Preflighted_requests
+
+MuleSoft
+https://docs.mulesoft.com/api-manager/2.x/cors-policy
 
 # Example
 
