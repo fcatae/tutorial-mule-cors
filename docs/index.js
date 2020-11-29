@@ -20,6 +20,17 @@ async function getRemoteData(url) {
     return await response.json();
 }
 
+        
+async function getRemoteDataWithCredentials(url) {
+    var response = await fetch(url, {credentials: 'include'});
+
+    if( response.status != 200 )
+        throw "HTTP status code != 200"
+
+    return await response.json();
+}
+
+        
 async function getRemoteDataWithHeaders(url) {
     var response = await fetch(url, {
             headers: [ ['Authorization', 'Bearer ABC'] ]
