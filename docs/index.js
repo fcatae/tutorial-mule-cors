@@ -22,7 +22,7 @@ async function getRemoteData(url) {
 
         
 async function getRemoteDataWithCredentials(url) {
-    var response = await fetch(url, {credentials: 'include'});
+    var response = await fetch(url, {credentials: 'include', mode: 'no-cors'});
 
     if( response.status != 200 )
         throw "HTTP status code != 200"
